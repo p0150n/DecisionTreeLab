@@ -37,7 +37,6 @@ namespace DecisionTreeLab.Tests
                 Id = nameof(executeOrderVoidMethod),
                 Name = nameof(executeOrderVoidMethod),
                 Expression = "Context.Order.Void()",
-                ParentNode = tree
             };
             tree.True = executeOrderVoidMethod;
 
@@ -46,7 +45,6 @@ namespace DecisionTreeLab.Tests
                 Id = nameof(setOrderDisplayName),
                 Name = nameof(setOrderDisplayName),
                 Expression = "Context.Order.DisplayName = \"Another order\"",
-                ParentNode = tree,
                 ReturnType = typeof(string)
             };
             tree.False = setOrderDisplayName;
@@ -63,7 +61,6 @@ namespace DecisionTreeLab.Tests
                 Id = nameof(executeOrderVoidMethod),
                 Name = nameof(executeOrderVoidMethod),
                 Expression = "Context.Order.DisplayName = null",
-                ParentNode = tree
             };
             isOrderDisplayNameEqualsToResult.True = setOrderDisplayNameToNull;
 

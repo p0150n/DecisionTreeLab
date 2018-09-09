@@ -1,6 +1,6 @@
 ﻿namespace DecisionTreeLab.Nodes
 {
-    public abstract class Node
+    public abstract class Node : INode
     {
         public string Id { get; set; }
 

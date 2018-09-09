@@ -1,6 +1,6 @@
 ﻿namespace DecisionTreeLab.Nodes
 {
-    public class ActionNode : NodeWithOneChild
+    public class ActionNode : OneChildNode, IActionNode
     {
         public override NodeKind Kind => NodeKind.Action;
 

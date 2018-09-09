@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 
 namespace DecisionTreeLab
 {
-    public class TreeProcessor
+    public class TreeProcessor : ITreeProcessor
     {
-        private readonly ExpressionExecutor expressionExecutor;
+        private readonly IExpressionExecutor expressionExecutor;
 
-        public TreeProcessor(ExpressionExecutor expressionExecutor)
+        public TreeProcessor(IExpressionExecutor expressionExecutor)
         {
             this.expressionExecutor = expressionExecutor;
         }

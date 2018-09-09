@@ -2,7 +2,7 @@
 
 namespace DecisionTreeLab.Nodes
 {
-    public class FuncNode : ActionNode
+    public class FuncNode : ActionNode, IFuncNode
     {
         public override NodeKind Kind => NodeKind.Func;
 

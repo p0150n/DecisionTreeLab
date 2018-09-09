@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DecisionTreeLab
 {
-    public class ExpressionExecutor
+    public class ExpressionExecutor : IExpressionExecutor
     {
         private readonly ConcurrentDictionary<ScriptCacheKey, Script> scriptsChache;
         private readonly ScriptOptions scriptOptions;

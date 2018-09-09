@@ -1,6 +1,6 @@
 ﻿namespace DecisionTreeLab.Nodes
 {
-    public class ConditionNode : Node
+    public class ConditionNode : Node, IConditionNode
     {
         public override NodeKind Kind => NodeKind.Condition;
 
