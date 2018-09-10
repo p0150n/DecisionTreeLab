@@ -71,7 +71,7 @@ namespace DecisionTreeLab.Tests
             var sw = Stopwatch.StartNew();
             TreeProcessResult result = await treeProcessor.Process(tree, context);
             sw.Stop();
-            var firstRunTimeMilliseconds = sw.Elapsed.TotalSeconds;
+            var firstRunTimeSeconds = sw.Elapsed.TotalSeconds;
             sw.Restart();
             for (int i = 0; i < 100_000; i++)
             {
@@ -80,7 +80,7 @@ namespace DecisionTreeLab.Tests
                 sw.Start();
                 TreeProcessResult result2 = await treeProcessor.Process(tree, ctx);
             }
-            var multipleRunsMilliseconds = sw.Elapsed.TotalSeconds;
+            var multipleRunsSecondes = sw.Elapsed.TotalSeconds;
             sw.Stop();
         }
 
