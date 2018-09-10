@@ -1,6 +1,9 @@
-﻿namespace DecisionTreeLab.Nodes
+﻿using Newtonsoft.Json;
+
+namespace DecisionTreeLab.Nodes
 {
-    public class ActionNode : OneChildNode, IActionNode
+    [JsonConverter(typeof(NullObjectJsonConverter))]
+    public class ActionNode : OneChildNode, IActionNode, IExpressionNode, IOneChildNode, INode
     {
         public override NodeKind Kind => NodeKind.Action;
 

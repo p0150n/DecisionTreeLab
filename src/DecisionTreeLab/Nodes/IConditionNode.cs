@@ -1,6 +1,6 @@
 ﻿namespace DecisionTreeLab.Nodes
 {
-    public interface IConditionNode : IExpressionNode
+    public interface IConditionNode : IExpressionNode, INode
     {
         Node False { get; set; }
 

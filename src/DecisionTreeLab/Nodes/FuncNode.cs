@@ -1,13 +1,16 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace DecisionTreeLab.Nodes
 {
-    public class FuncNode : ActionNode, IFuncNode
+    [JsonConverter(typeof(NullObjectJsonConverter))]
+    public class FuncNode : ActionNode, IFuncNode, IActionNode, IExpressionNode, IOneChildNode, INode
     {
         public override NodeKind Kind => NodeKind.Func;
 
         public string ReturnTypeName { get; set; }
 
+        [JsonIgnore]
         public Type ReturnType
         {
             get => Type.GetType(this.ReturnTypeName);

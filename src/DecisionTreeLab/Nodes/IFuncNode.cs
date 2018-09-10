@@ -2,7 +2,7 @@
 
 namespace DecisionTreeLab.Nodes
 {
-    public interface IFuncNode : IActionNode
+    public interface IFuncNode : IActionNode, IExpressionNode, IOneChildNode, INode
     {
         Type ReturnType { get; set; }
 

@@ -1,6 +1,9 @@
-﻿namespace DecisionTreeLab.Nodes
+﻿using Newtonsoft.Json;
+
+namespace DecisionTreeLab.Nodes
 {
-    public class ConditionNode : Node, IConditionNode
+    [JsonConverter(typeof(NullObjectJsonConverter))]
+    public class ConditionNode : Node, IConditionNode, IExpressionNode, INode
     {
         public override NodeKind Kind => NodeKind.Condition;
 
